@@ -26,7 +26,7 @@
   <div class="container__order">
     <div class="text__container__order">
       <p class="subtitle__order">My balance</p>
-      <p class="title__order">$921.48</p>
+      <p class="title__order" id="soma"></p>
     </div>
   </div>
   <section class="section__info">
@@ -53,6 +53,12 @@
   let satNumber = Math.floor(Math.random() * 30) + 1;
   let sunNumber = Math.floor(Math.random() * 30) + 1;
 
+  let soma = document.getElementById('soma')
+
+  let somaDias = monNumber + tueNumber + wedNumber + thuNumber + friNumber + satNumber + sunNumber
+
+
+  soma.innerHTML = "R$ " + somaDias
 
   new Chart(ctx, {
     type: 'bar',
